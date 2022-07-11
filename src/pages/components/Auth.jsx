@@ -29,7 +29,7 @@ export const Auth = () => {
               <input type="password" className="form-control" aria-describedby="passHelp" placeholder="Password" name="password" value={password} onChange={onInputChange} />
               <small id="passHelp" className="form-text text-muted mb-2">All your passwords are secure with us.</small>
             </div>
-            <button className="btn btn-primary"> Login </button>
+            <button className="btn btn-primary"> Login </button> 
           </form>
         </div>
       </div>
