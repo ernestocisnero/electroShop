@@ -13,8 +13,8 @@ export const Navbar = () => {
                     <button className="btn btn-dark my-2 my-sm-0" type="submit">Search</button>
                 </div>
                 <NavLink className="navbar-brand mx-2" to="/auth">
-                        Login
-                    </NavLink>
+                    Login
+                </NavLink>
 
             </nav>
         </>
