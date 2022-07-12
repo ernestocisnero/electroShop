@@ -9,7 +9,7 @@ export const shopData = [
         type: "M-221",
         quantity:5,
         price:100,
-        description:'Some description about the product'
+        description:'The Modicon M221 is a Nano PLC made to control basic automation for machines. Programs with Machine Expert Basic software. Uses TM3 expansion I/O.'
     },
     {
         id:2,
@@ -19,7 +19,7 @@ export const shopData = [
         type: "M-241",
         quantity:5,
         price:200,
-        description:'Some description about the product'
+        description:'The Modicon M241 is a Micro PLC made to control more advanced automation for complex and modular machines. Programs with Machine Expert software. Uses TM3 expansion I/O.'
     },
     {
         id:3,
@@ -29,7 +29,7 @@ export const shopData = [
         type: "M-340",
         quantity:5,
         price:300,
-        description:'Some description about the product'
+        description:'Far more than a PLC, our Modicon M340 Programmable Automation Controllers (PACs) are built to suit the needs of the process industry and a wide range of demanding automation applications. Modicon M340 PACs can be used individually, but are also the perfect companion to the Modicon M580. '
     },
     {
         id:4,
@@ -39,7 +39,7 @@ export const shopData = [
         type: "M-580",
         quantity:5,
         price:400,
-        description:'Some description about the product'
+        description:'This product is part of the Modicon M580 range, an offer of Programmable Automation Controllers (PAC) and safety Programmable Logic Controllers (PLC) with built-in Ethernet. This processor module offers a maximum of 8 rack configuration and 144 application specific channels.'
     },
     {
         id:5,
@@ -49,7 +49,7 @@ export const shopData = [
         type: "SLC-505",
         quantity:5,
         price:200,
-        description:'Some description about the product'
+        description:"It's time to step forward to newer technology. The SLC™ 500 control system migration is part of the proactive modernization plan we have for you. As our SLC™ 5/01, 5/02 and 5/03 8K series controllers are discontinued and no longer available for sale."
     },
     {
         id:6,
@@ -59,7 +59,7 @@ export const shopData = [
         type: "Logix-5571",
         quantity:5,
         price:300,
-        description:'Some description about the product'
+        description:'The Logix5571 supports Integrated Motion on EtherNet/IP, integrated SERCOS motion, and analog motion. The module features a small display that accommodates four characters in alpha or numeric formats.'
     },
     {
         id:7,
@@ -69,7 +69,7 @@ export const shopData = [
         type: "UNO-R3",
         quantity:5,
         price:30,
-        description:'Some description about the product'
+        description:'The Arduino UNO is the best board to get started with electronics and coding. If this is your first experience tinkering with the platform, the UNO is the most robust board you can start playing with. The UNO is the most used and documented board of the whole Arduino family.'
     },
     {
         id:8,
@@ -89,6 +89,6 @@ export const shopData = [
         type: "ESP-32",
         quantity:5,
         price:7,
-        description:'Some description about the product'
+        description:'ESP32 can perform as a complete standalone system or as a slave device to a host MCU, reducing communication stack overhead on the main application processor.'
     }
 ]
