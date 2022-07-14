@@ -20,7 +20,7 @@ export const Auth = () => {
 
   return (
     <>
-      <div className="container w-50">
+      <div className="container w-50 mt-5">
         <div className="d-flex d-sm-flex flex-column justify-content-center mt-4">
           <form className="form-group" onSubmit={handleSubmit}>
             <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={email} onChange={onInputChange} />
