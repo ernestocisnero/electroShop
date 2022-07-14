@@ -6,7 +6,7 @@ import './PersonalizedUIstyles.css';
 
 export const Navbar = () => {
 
-    let cartCount;
+    const cartCount = JSON.parse(localStorage.getItem("cartTotal"));
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">

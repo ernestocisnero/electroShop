@@ -10,6 +10,7 @@ export const ListCards = () => {
 
             <Card
               key={item.id}
+              id={item.id}
               manufacturer={item.manufacturer}
               type={item.type}
               price={item.price}

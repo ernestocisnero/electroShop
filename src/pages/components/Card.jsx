@@ -1,6 +1,19 @@
+import { ShopList } from "../../helpers/ShopList";
+import { ShopListRemove } from "../../helpers/ShopListRemove";
 
 
-export const Card = ( {manufacturer, type, price, description, imgPath} ) => {
+export const Card = ( {id,manufacturer, type, price, description, imgPath} ) => {
+
+    const AddCart = ( event )=>{
+        const cartCount = ShopList( event.target.id );
+        localStorage.setItem("cartTotal",JSON.stringify(cartCount));
+    }
+
+    const RemoveCart = ( event )=>{
+        ShopListRemove( event.target.id);
+    }
+
+
     return (
         <>
             <div className="card w-25 h-25 mx-4 my-4">
@@ -13,11 +26,11 @@ export const Card = ( {manufacturer, type, price, description, imgPath} ) => {
                     <div className="row">
                         <div className="col-6">
 
-                    <button href="#" className="btn btn-dark">Add</button>
+                    <button onClick={ AddCart } className="btn btn-dark" id={id}>Add</button>
                         </div>
                         <div className="col-6">
 
-                    <button href="#" className="btn btn-danger">Remove</button>
+                    <button onClick={ RemoveCart} className="btn btn-danger" id={id}>Remove</button>
                         </div>
                     </div>
                     
