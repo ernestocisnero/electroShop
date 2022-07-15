@@ -9,18 +9,20 @@ export const CartContext = createContext();
 
 function App() {
 
-  const [cartCount, setCartCount] = useState(0);
+  const initialCartCount = JSON.parse(localStorage.getItem("cartCount"));
+  const [cartCount, setCartCount] = useState(initialCartCount || 0);
 
   return (
-    <CartContext.Provider value={{cartCount, setCartCount}}>
-      <div className="App">
+    <div className="App">
+      <CartContext.Provider value={{ cartCount, setCartCount }}>
         <Navbar />
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/auth" element={<Auth />} />
         </Routes>
-      </div>
-    </CartContext.Provider>
+      </CartContext.Provider>
+    </div>
+
   );
 }
 

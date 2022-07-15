@@ -1,6 +1,5 @@
 
-export const ShopList = ( id )=>{
-    let cartCount = 0;
+export const ShopList = ( id, cartCount )=>{
 
     const shopCartList = JSON.parse(localStorage.getItem("cartList")) || [];
 
@@ -17,10 +16,5 @@ export const ShopList = ( id )=>{
     }
 
     localStorage.setItem("cartList",JSON.stringify(shopCartList));
-
-    for (let index = 0; index < shopCartList.length; index++) {
-        cartCount += shopCartList[index].count;
-        
-    }
-    return cartCount;
+    localStorage.setItem("cartCount",JSON.stringify(cartCount));
 }
