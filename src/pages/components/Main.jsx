@@ -1,4 +1,4 @@
-import { ListCards } from "./ListCards"
+import { ListCards } from "../../UI/";
 
 
 export const Main = () => {

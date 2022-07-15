@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { createContext, useState } from "react";
 import './App.css';
-import { Auth, Main } from "./pages";
+import { Auth, Main,Cart } from "./pages";
 import { Navbar } from "./UI/Navbar";
 
 
@@ -19,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </CartContext.Provider>
     </div>

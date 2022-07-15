@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { CartContext } from "../../App";
-import { ShopList, ShopListRemove } from "../../helpers";
+import { CartContext } from "../App";
+import { ShopList, ShopListRemove } from "../helpers";
 
 
 
@@ -16,11 +16,11 @@ export const Card = ({ id, manufacturer, type, price, description, imgPath }) =>
     }
 
     const RemoveCart = (event) => {
-
         if (cartCount > 0) {
 
             setCartCount(cartCount = cartCount - 1);
         }
+        
         ShopListRemove(event.target.id, cartCount);
     }
 
@@ -28,7 +28,7 @@ export const Card = ({ id, manufacturer, type, price, description, imgPath }) =>
     return (
         <>
             <div className="card w-25 h-25 mx-4 my-4">
-                <img className="card-img-top" src={imgPath} alt={`${manufacturer}:${type}`} />
+                <img className="card-img-top mt-2" src={imgPath} alt={`${manufacturer}:${type}`} />
                 <div className="card-body">
                     <h5 className="card-title">{`${manufacturer}, ${type}: $${price}`}</h5>
                     <p className="card-text">{description}</p>

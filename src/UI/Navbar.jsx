@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import { CartContext } from "../App";
 
 import './PersonalizedUIstyles.css';
@@ -23,7 +23,9 @@ export const Navbar = () => {
                 </div>
 
                 <div className="container w-25">
+                    <Link className="navbar-brand" to="/cart">
                     <i className="fa-solid fa-cart-shopping fa-2xl"></i>
+                    </Link>
                     { cartCount > 0 && <div className="cart-counter"> {cartCount} </div> }
                 </div>
 
