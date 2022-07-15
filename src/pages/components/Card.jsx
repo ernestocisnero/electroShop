@@ -1,17 +1,24 @@
-import { ShopList } from "../../helpers/ShopList";
-import { ShopListRemove } from "../../helpers/ShopListRemove";
+import { useContext } from "react";
+import { CartContext } from "../../App";
+// import { ShopList } from "../../helpers/ShopList";
+// import { ShopListRemove } from "../../helpers/ShopListRemove";
 
 
 export const Card = ( {id,manufacturer, type, price, description, imgPath} ) => {
 
-    const AddCart = ( event )=>{
-        const cartCount = ShopList( event.target.id );
-        localStorage.setItem("cartTotal",JSON.stringify(cartCount));
+    let { cartCount, setCartCount } = useContext( CartContext );
+
+    const AddCart = ()=>{
+        setCartCount( cartCount++)
+
+    //     const cartCount = ShopList( event.target.id );
+    //     localStorage.setItem("cartTotal",JSON.stringify(cartCount));
     }
 
-    const RemoveCart = ( event )=>{
-        ShopListRemove( event.target.id);
-    }
+     const RemoveCart = ()=>{
+        setCartCount( cartCount--)
+    //     ShopListRemove( event.target.id);
+     }
 
 
     return (
@@ -26,11 +33,11 @@ export const Card = ( {id,manufacturer, type, price, description, imgPath} ) => 
                     <div className="row">
                         <div className="col-6">
 
-                    <button onClick={ AddCart } className="btn btn-dark" id={id}>Add</button>
+                    <button onClick={ AddCart  } className="btn btn-dark" id={id}>Add</button>
                         </div>
                         <div className="col-6">
 
-                    <button onClick={ RemoveCart} className="btn btn-danger" id={id}>Remove</button>
+                    <button onClick={ RemoveCart } className="btn btn-danger" id={id}>Remove</button>
                         </div>
                     </div>
                     

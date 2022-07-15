@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { CartContext } from "../App";
 
 import './PersonalizedUIstyles.css';
 
@@ -6,9 +8,12 @@ import './PersonalizedUIstyles.css';
 
 export const Navbar = () => {
 
-    const cartCount = JSON.parse(localStorage.getItem("cartTotal"));
+    //const cartCount = JSON.parse(localStorage.getItem("cartTotal"));
+    const { cartCount } = useContext( CartContext );
+    
     return (
         <>
+
             <nav className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
                 <NavLink className="navbar-brand" to="/">Electro-Shop</NavLink>
 
@@ -19,7 +24,7 @@ export const Navbar = () => {
 
                 <div className="container w-25">
                     <i className="fa-solid fa-cart-shopping fa-2xl"></i>
-                     { cartCount > 0 && <div className="cart-counter"> {cartCount} </div> }
+                    { cartCount > 0 && <div className="cart-counter"> {cartCount} </div> }
                 </div>
 
                 <NavLink className="navbar-brand mx-2" to="/auth">
@@ -28,5 +33,6 @@ export const Navbar = () => {
 
             </nav>
         </>
+
     )
 }
