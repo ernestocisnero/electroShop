@@ -1,10 +1,12 @@
 import { shopData } from "../data/shopData";
 import { Card } from "./Card"
 
+import './PersonalizedUIstyles.css';
+
 export const ListCards = () => {
   return (
     <>
-      <div className="container d-flex flex-row flex-wrap mt-4 ">
+      <div className="container d-flex flex-row flex-wrap mt-4 " id="card-container">
         {
           shopData.map(item =>
 

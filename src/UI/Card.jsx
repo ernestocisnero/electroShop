@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { CartContext } from "../App";
 import { ShopList, ShopListRemove } from "../helpers";
 
+import './PersonalizedUIstyles.css';
+
 
 
 export const Card = ({ id, manufacturer, type, price, description, imgPath }) => {
